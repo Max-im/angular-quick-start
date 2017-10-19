@@ -1,0 +1,28 @@
+.card-action{
+  text-align: center;
+}
+
+
+.card-content{
+  height: 150px;
+}
+
+.marked{
+  background: #5480ec;
+  color: #fff;
+}
+
+
+.card{
+  transition: all .3s;
+  z-index: 100;
+  &:hover{
+    transition: all .3s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+  }
+}
+
+.card .card-image .card-title{
+  text-transform: capitalize;
+}

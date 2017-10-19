@@ -1,0 +1,22 @@
+
+
+
+<div class="col s12 m6 l4 xl3" >
+	<div class="card" [ngClass]="{'marked' : mark}">
+		<div class="card-image">
+			<img src={{cardItem.img}}>
+			<span class="card-title">{{ cardItem.name }}</span>
+		</div>
+		<div class="card-content">
+			<p>{{ cardItem.geo }}</p>
+		</div>
+		<div class="card-action">
+		 	<a 
+		 		(click)=onClick()
+		 		
+		 		class="waves-effect waves-light btn card__btn">
+		 		{{mark ? 'unselect' : 'select'}}
+		 	</a>
+		</div>
+	</div>
+</div>
