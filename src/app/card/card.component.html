@@ -1,7 +1,4 @@
-
-
-
-<div class="col s12 m6 l4 xl3" >
+<div class="col s6 m4 l4 xl3" >
 	<div class="card" [ngClass]="{'marked' : mark}">
 		<div class="card-image">
 			<img src={{cardItem.img}}>
@@ -13,9 +10,13 @@
 		<div class="card-action">
 		 	<a 
 		 		(click)=onClick()
-		 		
+		 		class="btn-floating btn-large waves-effect waves-light red">
+		 		<i class="material-icons">{{ mark ? 'remove' : 'add' }}</i>
+		 	</a>
+		 	<a 
+		 		[routerLink]="[cardItem.id, cardItem.name, cardItem.geo, cardItem.img]"
 		 		class="waves-effect waves-light btn card__btn">
-		 		{{mark ? 'unselect' : 'select'}}
+		 		more
 		 	</a>
 		</div>
 	</div>

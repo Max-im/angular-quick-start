@@ -10,11 +10,15 @@ import { UserService } from './user.service';
 import { SearchPipe } from './search.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SinglePageComponent } from './single-page/single-page.component';
 
 
 const appRoutes = [
   { path: '', component: HomePageComponent },
-  { path: 'setup', component: SetupPageComponent }
+  { path: ':id/:name/:geo/:img', component: SinglePageComponent },
+  { path: 'setup', component: SetupPageComponent },
+  { path: '**', component: NotFoundComponent }
 ]
 
 
@@ -24,7 +28,9 @@ const appRoutes = [
     CardComponent,
     SearchPipe,
     HomePageComponent,
-    SetupPageComponent
+    SetupPageComponent,
+    NotFoundComponent,
+    SinglePageComponent
   ],
   imports: [
     BrowserModule,
